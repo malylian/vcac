@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+   <parent>
+      <groupId>com.vmware.vcac</groupId>
+      <artifactId>lib</artifactId>
+      <version>6.2.0</version>
+   </parent>
+
+   <artifactId>odata4j-core-lib</artifactId>
+
+   <packaging>pom</packaging>
+
+   <description>
+       odata4j is an open-source toolkit for building first-class OData producers and first-class
+       OData consumers in Java.
+   </description>
+
+   <licenses>
+      <license>
+         <name>Apache 2.0</name>
+         <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+      </license>
+   </licenses>
+
+   <dependencies>
+      <dependency>
+         <groupId>org.odata4j</groupId>
+         <artifactId>odata4j-core</artifactId>
+         <version>${odata4j.version}</version>
+         <exclusions>
+            <exclusion>
+               <groupId>org.eclipse.persistence</groupId>
+               <artifactId>javax.persistence</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>org.eclipse.persistence</groupId>
+               <artifactId>eclipselink</artifactId>
+            </exclusion>
+            <exclusion>
+               <groupId>javax.ws.rs</groupId>
+               <artifactId>jsr311-api</artifactId>
+            </exclusion>
+         </exclusions>
+      </dependency>
+   </dependencies>
+</project>
